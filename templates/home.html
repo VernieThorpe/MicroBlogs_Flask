@@ -31,13 +31,7 @@
         <form class="form" method="POST">
           <p class="form__input">
             <label for="entry" class="form__label">Entry title:</label>
-            <textarea
-              name="title"
-              id="entry"
-              class="form__textarea"
-              rows="1"
-            ></textarea>
-
+            <textarea name="title" id="entry" class="form__textarea"></textarea>
             <label for="entry" class="form__label">Entry contents:</label>
             <textarea
               name="content"
@@ -53,7 +47,7 @@
         {% for entry in entries %}
         <article class="entry">
           <div>
-            <h2 class="entry__title">{{ entry[2] }}</h2>
+            <h2 class="entry__title">{{ entry[2] | truncate(30,true) }}</h2>
             <time class="entry__date" datetime="{{ entry[1] }}"
               >• {{ entry[3] }}</time
             >

@@ -1,0 +1,5 @@
+dnspython==2.1.0
+Flask==2.0.2
+Jinja2==3.0.3
+pymongo==4.0.1
+python-dotenv==0.19.2
